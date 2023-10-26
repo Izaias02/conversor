@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>conversor de temperatura</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-auto bg-secondary p-5 rouded">
+                <form onsubmit="return false">
+                    <!-- config da primeiraa linha -->
+                    <div class="row">
+                        <div class="col">
+                            <label for="temperatura" class="form-label fw-bold text-light">temperatura</label>
+                            <input type="number" name="temperatura" id="temperatura" class="form-control">
+                        </div>
+                    </div>
+                    <!-- titulo -->
+                    <h1 class="text-light ">converter para Celsius ou Fahrenheit:</h1>
+
+                    <!-- conversor -->
+                    <div class="row">
+                        <div class="col">
+                            <label for="conversor" class="form-label fw-bold text-light">conversor</label>
+                            <select type="conversor" name="conversor" id="conversor" class="form-select">
+                                <option value=""></option>
+                                <option value="Fahrenheit">Fahrenheit</option>
+                                <option value="Celsius">Celsius</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- botão de converter -->
+
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-primary mt-2" name="btncalcular" id="btncalcular"
+                                onclick="calcular()">converter</button>
+                        </div>
+                        <!-- botao para limpar -->
+                        <div class="col">
+                            <button class="btn btn-primary mt-2" name="btnlimpar" id="btnlimpar"
+                                onclick="limpar()">limpar</button>
+                        </div>
+                    </div>
+
+                    <!-- resultado -->
+                    <div class="row">
+                        <div class="col">
+                            <label for="resultado" class="form-label fw-bold text-light">RESULTADO:</label>
+                            <!-- <label id="resultado" class="form-label fw-bold text-light">-</label> -->
+                            <input name="txtresultado" id="txtresultado">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./conversor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+</html>
